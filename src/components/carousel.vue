@@ -31,7 +31,7 @@
 
     .el-carousel {
         max-width: 1200px;
-        margin: 61px auto 0 auto;
+        margin: 0px auto 0 auto;
     }
 
 </style>

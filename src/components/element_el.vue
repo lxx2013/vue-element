@@ -1,6 +1,6 @@
 <template>
 
-<div>
+<div class="element_el">
 
 </div>
 </template>
@@ -24,21 +24,9 @@
 
 </script>
 <style scope>
-    .el-carousel__item h3 {
-        color: #475669;
-        font-size: 18px;
-        opacity: 0.75;
-        line-height: 300px;
-        margin: 0;
-        text-align: center;
-    }
-
-    .el-carousel__item:nth-child(2n) {
-        background-color: #99a9bf;
-    }
-
-    .el-carousel__item:nth-child(2n+1) {
-        background-color: #d3dce6;
+    div.element_el {
+        width: 100%;
+        height: 60px;
     }
 
 </style>
