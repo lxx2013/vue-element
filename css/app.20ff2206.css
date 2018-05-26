@@ -1,0 +1,120 @@
+div.element_el {
+    width: 100%;
+    height: 60px
+}
+
+#app[data-v-0cbbcb1e] {
+    font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, \\5FAE\8F6F\96C5\9ED1, Arial, sans-serif;
+    margin-top: 0
+}
+
+.el-menu-top[data-v-0cbbcb1e] {
+    max-width: 1200px;
+    margin: 0 auto !important;
+    border-bottom-color: #409eff !important
+}
+
+.el-menu-top .el-menu-item[data-v-0cbbcb1e],
+.el-menu-top .el-menu-item img[data-v-0cbbcb1e] {
+    height: 60px
+}
+
+.el-menu-top .el-menu-item[data-v-0cbbcb1e]:last-of-type {
+    float: right
+}
+
+.el-menu-top .el-menu-item.is-disabled[data-v-0cbbcb1e] {
+    opacity: 1;
+    cursor: default
+}
+
+.el-menu-out[data-v-0cbbcb1e] {
+    background: #409eff;
+    width: 100%;
+    -webkit-box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .3);
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100
+}
+
+* {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    background-color: #f9f9f9;
+    min-width: 328px
+}
+
+.el-carousel__item div {
+    background: url(../img/banner.dcc999ea.jpg);
+    height: 300px;
+    background-position: 50%;
+    background-size: cover
+}
+
+.el-carousel {
+    max-width: 1200px;
+    margin: 0 auto
+}
+
+span[data-v-4a891917] {
+    line-height: 100%
+}
+
+.el-card[data-v-608b3a64] {
+    margin-bottom: 10px
+}
+
+#right-col .el-card:first-of-type .el-button[data-v-608b3a64] {
+    margin: 0;
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 0;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
+}
+
+.info[data-v-608b3a64] {
+    color: #909399;
+    background: #f4f4f5;
+    border-color: #d3d4d6;
+    display: inline-block;
+    min-width: 50px;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    text-align: right;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    margin: 0;
+    -webkit-transition: .1s;
+    transition: .1s;
+    font-weight: 500;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    padding: 2px 3px;
+    font-size: 14px;
+    border-radius: 4px
+}
+
+@media only screen and (max-width:500px) {
+    #left-col[data-v-608b3a64] {
+        width: 100% !important
+    }
+    #right-col[data-v-608b3a64] {
+        position: fixed !important;
+        right: 0;
+        width: 70px
+    }
+    #right-col .el-container .el-card div[data-v-608b3a64] {
+        padding: 0 !important
+    }
+}
