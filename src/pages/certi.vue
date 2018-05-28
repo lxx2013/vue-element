@@ -27,12 +27,12 @@
             </el-container>
         </el-col>
         <el-col :span="7" id="right-col" style="max-width:200px;float:right"><el-container direction="vertical">
-            <el-card >
+            <el-card :body-style="{padding:card_padding}">
                 <el-button icon="el-icon-edit" type="primary" plain><span class="hidden-xs-only">编辑简历</span></el-button>
                 <el-button icon="el-icon-printer" type="primary" plain><span class="hidden-xs-only">打印简历</span></el-button>
                 <el-button icon="el-icon-share" type="primary" plain><span class="hidden-xs-only">申请职位</span></el-button>
             </el-card>
-            <el-card>
+            <el-card :body-style="{padding:card_padding}">
                     <el-row>
                         <span class="hidden-xs-only" style="">简历完整度 : </span>
                         <el-tooltip content="简历完整度" placement="top">
@@ -88,7 +88,10 @@
                         modify_time: "2018-05-26 17:00:00"
                     }
                 },
-                data: contentData
+                data: contentData,
+                screenWidth: 1080,
+                col_num: 1,
+                card_padding: '20px'
             }
         },
         methods: {
@@ -109,16 +112,27 @@
                 } else {
                     return sec + "秒"
                 }
-                return "error";
             }
         },
         computed: {
-            col_num() {
-                if (document.body.clientWidth <= 768) {
-                    return 1;
+
+        },
+        watch: {
+            screenWidth: function(vn, vo) {
+                if (vn < 768) {
+                    this.col_num = 1;
+                    this.card_padding = '0px';
                 } else {
-                    return 2;
+                    this.col_num = 2;
+                    this.card_padding = '20px';
                 }
+            }
+        },
+        mounted() {
+            const that = this;
+            this.screenWidth = document.body.clientWidth;
+            window.onresize = () => {
+                that.screenWidth = document.body.clientWidth;
             }
         }
     }
@@ -165,7 +179,7 @@
         border-radius: 4px;
     }
 
-    @media only screen and(max-width:500px) {
+    @media only screen and(max-width:767px) {
         #left-col {
             width: 100% !important;
         }
@@ -175,8 +189,13 @@
             width: 70px;
 
         }
-        #right-col .el-container .el-card div {
+        #right-col .el-card__body {
             padding: 0 !important;
+        }
+        #right-col .el-card:nth-of-type(2) {
+            span {
+                padding: 0 8px;
+            }
         }
     }
 

@@ -16,7 +16,7 @@ import login from "./pages/login.vue"
 const routes = [
     {
         path: '',
-        component: index
+        redirect: '/index'
     },
     {
         path: '/index',
